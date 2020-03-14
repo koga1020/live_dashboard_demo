@@ -33,7 +33,8 @@ defmodule LiveDashboardDemo.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.4.15"},
+      {:phoenix, "~> 1.4.15",
+       git: "https://github.com/phoenixframework/phoenix.git", branch: "v1.4", override: true},
       {:phoenix_pubsub, "~> 1.1"},
       {:phoenix_ecto, "~> 4.0"},
       {:ecto_sql, "~> 3.1"},
@@ -43,8 +44,9 @@ defmodule LiveDashboardDemo.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:phoenix_live_view, "~> 0.9.0"},
-      {:floki, ">= 0.0.0", only: :test}
+      {:phoenix_live_view, git: "https://github.com/phoenixframework/phoenix_live_view.git"},
+      {:floki, ">= 0.0.0", only: :test},
+      {:phoenix_live_dashboard, github: "phoenixframework/phoenix_live_dashboard"}
     ]
   end
 

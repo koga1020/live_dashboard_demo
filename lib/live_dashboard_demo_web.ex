@@ -23,6 +23,8 @@ defmodule LiveDashboardDemoWeb do
 
       import Plug.Conn
       import LiveDashboardDemoWeb.Gettext
+      import Phoenix.LiveView.Controller
+
       alias LiveDashboardDemoWeb.Router.Helpers, as: Routes
     end
   end
@@ -42,6 +44,8 @@ defmodule LiveDashboardDemoWeb do
       import LiveDashboardDemoWeb.ErrorHelpers
       import LiveDashboardDemoWeb.Gettext
       alias LiveDashboardDemoWeb.Router.Helpers, as: Routes
+
+      import Phoenix.LiveView.Helpers
     end
   end
 
@@ -50,6 +54,7 @@ defmodule LiveDashboardDemoWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
+      import Phoenix.LiveView.Router
     end
   end
 

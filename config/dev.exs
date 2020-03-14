@@ -75,3 +75,8 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
+
+config :live_dashboard_demo, LiveDashboardDemoWeb.Endpoint,
+  live_view: [
+    signing_salt: "M1atFG7hKIorpAYp70I+pT54aeBdRRBe"
+  ]

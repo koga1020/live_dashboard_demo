@@ -2,9 +2,10 @@ use Mix.Config
 
 # Configure your database
 config :live_dashboard_demo, LiveDashboardDemo.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "live_dashboard_demo_dev",
+  username: System.fetch_env!("POSTGRES_USER"),
+  password: System.fetch_env!("POSTGRES_PASSWORD"),
+  database: System.fetch_env!("POSTGRES_DB"),
+  port: String.to_integer(System.fetch_env!("POSTGRES_PORT")),
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
